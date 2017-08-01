@@ -30,7 +30,7 @@ class TempTabController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-    cell.textLabel?.text = "第"+"\(indexPath.row+1)"+"行"
+    cell.textLabel?.text = self.title!+"第"+"\(indexPath.row+1)"+"行"
         cell.selectionStyle = .none
         return cell
     }

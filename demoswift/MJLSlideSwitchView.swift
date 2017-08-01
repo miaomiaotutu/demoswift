@@ -21,7 +21,8 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
     var topScrollview:UIScrollView?
     var rootScrollview:UIScrollView?
     var viewcontrollers:Array<Any>?
-    
+    var preBtn:UIButton?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -61,12 +62,17 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
             btn.frame = CGRect(x: CGFloat(index)*buttonWidth, y: 0, width: buttonWidth, height: 44)
             btn.setTitle(controller?.title, for: .normal)
             btn.setTitleColor(UIColor.black, for: .normal)
+            btn.setTitleColor(UIColor.orange, for: .selected)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             btn.titleLabel?.textAlignment = .center
             btn.backgroundColor = UIColor.lightGray
             btn.tag = 100+index
-            btn.addTarget(self, action: Selector(("btnclicked:")), for: .touchUpInside)
+            btn.addTarget(self, action:#selector(btnclicked(_:)) , for: .touchUpInside)
             self.topScrollview!.addSubview(btn)
+            if index == 0 {
+                btn.isSelected = true
+                self.preBtn = btn
+            }
         }
         self.topScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*buttonWidth, height: 44)
 
@@ -74,11 +80,17 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
 
         
     }
-    func btnclicked(btn:UIButton) {
+    func btnclicked(_ btn:UIButton) {
+        self.preBtn?.isSelected = false
+        btn.isSelected = !btn.isSelected
+        self.preBtn = btn
+        if btn.isSelected == true {
+            self.rootScrollview?.setContentOffset(CGPoint(x: CGFloat(btn.tag-100)*self.bounds.size.width, y: 0), animated: true)
+        }
         
     }
-       func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.x)
     }
     
 }
