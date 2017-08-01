@@ -19,11 +19,14 @@
 		1A1EDDBB1F15D5DE009947B4 /* mjl_caigou_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EDDB91F15D5DE009947B4 /* mjl_caigou_selected@3x.png */; };
 		1A1EDDBE1F15D5E8009947B4 /* mjladd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EDDBC1F15D5E8009947B4 /* mjladd@3x.png */; };
 		1A1EDDBF1F15D5E8009947B4 /* mjlreduce@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A1EDDBD1F15D5E8009947B4 /* mjlreduce@3x.png */; };
+		1A53AF271F300FBC0030ECC5 /* TempTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53AF261F300FBC0030ECC5 /* TempTabController.swift */; };
 		1A5B99EE1F29BDFC009F301A /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B99ED1F29BDFC009F301A /* TestController.swift */; };
 		1A5BEE701F271A4900930184 /* BlockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BEE6F1F271A4800930184 /* BlockController.swift */; };
 		1A5BEE721F273CCB00930184 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BEE711F273CCB00930184 /* TableViewController.swift */; };
 		1A5BEE751F273CE200930184 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BEE731F273CE200930184 /* TableViewCell.swift */; };
 		1A5BEE761F273CE200930184 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BEE741F273CE200930184 /* TableViewCell.xib */; };
+		1A5C6CA81F2C6F8E00915C79 /* MJLSlideSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */; };
+		1A720FF81F2F1B4700AAF1CE /* SlideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A720FF71F2F1B4700AAF1CE /* SlideController.swift */; };
 		1A84D0981F2B0AF400F913C4 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84D0971F2B0AF400F913C4 /* CollectionController.swift */; };
 		1A84D09D1F2B0BD000F913C4 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84D09B1F2B0BD000F913C4 /* CollectionCell.swift */; };
 		1A84D09E1F2B0BD000F913C4 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A84D09C1F2B0BD000F913C4 /* CollectionCell.xib */; };
@@ -48,11 +51,14 @@
 		1A1EDDB91F15D5DE009947B4 /* mjl_caigou_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mjl_caigou_selected@3x.png"; sourceTree = "<group>"; };
 		1A1EDDBC1F15D5E8009947B4 /* mjladd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mjladd@3x.png"; sourceTree = "<group>"; };
 		1A1EDDBD1F15D5E8009947B4 /* mjlreduce@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mjlreduce@3x.png"; sourceTree = "<group>"; };
+		1A53AF261F300FBC0030ECC5 /* TempTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempTabController.swift; sourceTree = "<group>"; };
 		1A5B99ED1F29BDFC009F301A /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		1A5BEE6F1F271A4800930184 /* BlockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockController.swift; sourceTree = "<group>"; };
 		1A5BEE711F273CCB00930184 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1A5BEE731F273CE200930184 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1A5BEE741F273CE200930184 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJLSlideSwitchView.swift; sourceTree = "<group>"; };
+		1A720FF71F2F1B4700AAF1CE /* SlideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideController.swift; sourceTree = "<group>"; };
 		1A84D0971F2B0AF400F913C4 /* CollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 		1A84D09B1F2B0BD000F913C4 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		1A84D09C1F2B0BD000F913C4 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				1A84D0971F2B0AF400F913C4 /* CollectionController.swift */,
 				1A84D09B1F2B0BD000F913C4 /* CollectionCell.swift */,
 				1A84D09C1F2B0BD000F913C4 /* CollectionCell.xib */,
+				1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */,
+				1A720FF71F2F1B4700AAF1CE /* SlideController.swift */,
+				1A53AF261F300FBC0030ECC5 /* TempTabController.swift */,
 				1A84D09F1F2B106000F913C4 /* recommend_reason_0@2x.png */,
 				1A84D0A11F2B10CA00F913C4 /* comment_profile_mars@2x.png */,
 				1A1EDDB81F15D5DE009947B4 /* mjl_caigou_normal@3x.png */,
@@ -278,10 +287,13 @@
 				1A1EDDA31F15D107009947B4 /* ViewController.swift in Sources */,
 				1A1EDDB31F15D19F009947B4 /* TabbarController.swift in Sources */,
 				1A1EDDA11F15D107009947B4 /* AppDelegate.swift in Sources */,
+				1A720FF81F2F1B4700AAF1CE /* SlideController.swift in Sources */,
 				1A5B99EE1F29BDFC009F301A /* TestController.swift in Sources */,
+				1A5C6CA81F2C6F8E00915C79 /* MJLSlideSwitchView.swift in Sources */,
 				1A1EDDB71F15D330009947B4 /* SecondController.swift in Sources */,
 				1A84D09D1F2B0BD000F913C4 /* CollectionCell.swift in Sources */,
 				1A5BEE701F271A4900930184 /* BlockController.swift in Sources */,
+				1A53AF271F300FBC0030ECC5 /* TempTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

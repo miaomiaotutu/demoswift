@@ -9,7 +9,30 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    var didmjlvalue: Float?{
+        didSet{
+            self.slider.value = didmjlvalue!
+            print(didmjlvalue ?? 33)
+        }
+    }
+    var haha: String? {
+        
+        didSet {
+        
+        }
+    }
+    var _mjlvalue : Float?
+    var mjlvalue: Float? {
+        get {
+            return _mjlvalue
+        }
+        set {
+            _mjlvalue = newValue
+            self.slider.value = _mjlvalue!
+            print(_mjlvalue ?? 33)
+            
+        }
+    }
     @IBOutlet weak var slider: UISlider!
     override func awakeFromNib() {
         super.awakeFromNib()

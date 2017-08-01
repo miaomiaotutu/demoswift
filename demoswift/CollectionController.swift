@@ -34,5 +34,11 @@ class CollectionController: UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        
+        let controller = SlideController()
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+        
     }
+   
 }
