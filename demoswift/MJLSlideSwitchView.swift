@@ -22,7 +22,7 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
     var rootScrollview:UIScrollView?
     var viewcontrollers:Array<Any>?
     var preBtn:UIButton?
-    let shadowimage = UIImageView()
+    var shadowimage:UIImageView?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,7 +56,8 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
         self.topScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*buttonWidth, height: 44)
         
         self.rootScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*self.bounds.size.width, height: self.bounds.size.height-44)
-        self.shadowimage.backgroundColor = UIColor.orange
+        self.shadowimage = UIImageView()
+        self.shadowimage?.backgroundColor = UIColor.orange
         for index in 0...totalnumber!-1 {
             let controller = self.delegate?.slideswitchView!(self, viewoftab: index)
             controller?.view.frame = CGRect(x: CGFloat(index)*self.bounds.size.width, y: 0, width: self.bounds.size.width, height: self.bounds.size.height-44)
@@ -70,18 +71,21 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
             btn.setTitleColor(UIColor.orange, for: .selected)
             btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             btn.titleLabel?.textAlignment = .center
-            btn.backgroundColor = UIColor.lightGray
             btn.tag = 100+index
             btn.addTarget(self, action:#selector(btnclicked(_:)) , for: .touchUpInside)
             self.topScrollview!.addSubview(btn)
             if index == 0 {
                 btn.isSelected = true
                 self.preBtn = btn
-                self.shadowimage.frame = CGRect(x: btn.frame.origin.x+10, y: btn.bounds.size.height-2, width: btn.bounds.size.width-20, height: 2)
-                self.topScrollview?.addSubview(self.shadowimage)
+                self.shadowimage?.frame = CGRect(x: btn.frame.origin.x+10, y: btn.bounds.size.height-2, width: btn.bounds.size.width-20, height: 2)
+                self.topScrollview?.addSubview(self.shadowimage!)
 
             }
         }
+        let backline = UIView(frame: CGRect(x: 0, y: 43, width: (self.topScrollview?.contentSize.width)!, height: 1))
+        backline.backgroundColor = UIColor.groupTableViewBackground
+        self.topScrollview?.addSubview(backline)
+        self.topScrollview?.bringSubview(toFront: self.shadowimage!)
     }
     func btnclicked(_ btn:UIButton) {
         self.adjustButton(btn)
@@ -89,8 +93,7 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
         btn.isSelected = !btn.isSelected
         self.preBtn = btn
         UIView.animate(withDuration: 0.25, animations: { 
-            self.shadowimage.frame = CGRect(x: btn.frame.origin.x+10, y: btn.bounds.size.height-2, width: btn.bounds.size.width-20, height: 2)
-            self.topScrollview?.addSubview(self.shadowimage)
+            self.shadowimage?.frame = CGRect(x: btn.frame.origin.x+10, y: btn.bounds.size.height-2, width: btn.bounds.size.width-20, height: 2)
         }) { (finished) in
             self.rootScrollview?.setContentOffset(CGPoint(x: CGFloat(btn.tag-100)*self.bounds.size.width, y: 0), animated: true)
         }
@@ -108,7 +111,6 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
         
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("Decelerating"+"\(scrollView.contentOffset.x)")
         if scrollView == self.rootScrollview {
             let tag = scrollView.contentOffset.x/self.bounds.size.width
             let tempbtn = self.topScrollview?.viewWithTag(Int(tag+100)) as! UIButton
