@@ -26,6 +26,7 @@
 		1A5BEE751F273CE200930184 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BEE731F273CE200930184 /* TableViewCell.swift */; };
 		1A5BEE761F273CE200930184 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A5BEE741F273CE200930184 /* TableViewCell.xib */; };
 		1A5C6CA81F2C6F8E00915C79 /* MJLSlideSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */; };
+		1A64C4DC1F345B3D0024B9EB /* MJLCustomScrollview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64C4DB1F345B3C0024B9EB /* MJLCustomScrollview.swift */; };
 		1A720FF81F2F1B4700AAF1CE /* SlideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A720FF71F2F1B4700AAF1CE /* SlideController.swift */; };
 		1A84D0981F2B0AF400F913C4 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84D0971F2B0AF400F913C4 /* CollectionController.swift */; };
 		1A84D09D1F2B0BD000F913C4 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A84D09B1F2B0BD000F913C4 /* CollectionCell.swift */; };
@@ -58,6 +59,7 @@
 		1A5BEE731F273CE200930184 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1A5BEE741F273CE200930184 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJLSlideSwitchView.swift; sourceTree = "<group>"; };
+		1A64C4DB1F345B3C0024B9EB /* MJLCustomScrollview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJLCustomScrollview.swift; sourceTree = "<group>"; };
 		1A720FF71F2F1B4700AAF1CE /* SlideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideController.swift; sourceTree = "<group>"; };
 		1A84D0971F2B0AF400F913C4 /* CollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 		1A84D09B1F2B0BD000F913C4 /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				1A5C6CA71F2C6F8E00915C79 /* MJLSlideSwitchView.swift */,
 				1A720FF71F2F1B4700AAF1CE /* SlideController.swift */,
 				1A53AF261F300FBC0030ECC5 /* TempTabController.swift */,
+				1A64C4DB1F345B3C0024B9EB /* MJLCustomScrollview.swift */,
 				1A84D09F1F2B106000F913C4 /* recommend_reason_0@2x.png */,
 				1A84D0A11F2B10CA00F913C4 /* comment_profile_mars@2x.png */,
 				1A1EDDB81F15D5DE009947B4 /* mjl_caigou_normal@3x.png */,
@@ -283,6 +286,7 @@
 				1A1EDDB51F15D320009947B4 /* FirstController.swift in Sources */,
 				1A5BEE751F273CE200930184 /* TableViewCell.swift in Sources */,
 				1A5BEE721F273CCB00930184 /* TableViewController.swift in Sources */,
+				1A64C4DC1F345B3D0024B9EB /* MJLCustomScrollview.swift in Sources */,
 				1A84D0981F2B0AF400F913C4 /* CollectionController.swift in Sources */,
 				1A1EDDA31F15D107009947B4 /* ViewController.swift in Sources */,
 				1A1EDDB31F15D19F009947B4 /* TabbarController.swift in Sources */,

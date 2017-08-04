@@ -9,6 +9,7 @@
 import UIKit
 let screen_width = UIScreen.main.bounds.size.width
 let screen_height = UIScreen.main.bounds.size.height
+let topscrollHeight:CGFloat = 44.0
 
 @objc protocol SlideSwitchViewDelegate{
       @objc optional func slideswitchView(_ view:MJLSlideSwitchView,viewoftab:Int) -> UIViewController
@@ -28,21 +29,20 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.white
-        self.topScrollview = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: 44))
+        self.topScrollview = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height:topscrollHeight))
         self.topScrollview?.showsVerticalScrollIndicator = false
         self.topScrollview?.showsHorizontalScrollIndicator = false
         self.topScrollview?.bounces = false
         self.topScrollview?.delegate = self
         self.addSubview(self.topScrollview!)
         
-        self.rootScrollview = UIScrollView(frame: CGRect(x: 0, y: 44, width: self.bounds.size.width, height: self.bounds.size.height-44))
+        self.rootScrollview = UIScrollView(frame: CGRect(x: 0, y: topscrollHeight, width: self.bounds.size.width, height: self.bounds.size.height-topscrollHeight))
         self.rootScrollview?.showsVerticalScrollIndicator = false
         self.rootScrollview?.showsHorizontalScrollIndicator = false
         self.rootScrollview?.bounces = false
         self.rootScrollview?.delegate = self
         self.rootScrollview?.isPagingEnabled = true
         self.addSubview(self.rootScrollview!)
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,19 +53,19 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
         let totalnumber = self.delegate?.numberOfTab!(self)
         
         let buttonWidth = self.bounds.size.width/CGFloat(item)
-        self.topScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*buttonWidth, height: 44)
+        self.topScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*buttonWidth, height: topscrollHeight)
         
-        self.rootScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*self.bounds.size.width, height: self.bounds.size.height-44)
+        self.rootScrollview?.contentSize = CGSize(width: CGFloat(totalnumber!)*self.bounds.size.width, height: self.bounds.size.height-topscrollHeight)
         self.shadowimage = UIImageView()
         self.shadowimage?.backgroundColor = UIColor.orange
         for index in 0...totalnumber!-1 {
             let controller = self.delegate?.slideswitchView!(self, viewoftab: index)
-            controller?.view.frame = CGRect(x: CGFloat(index)*self.bounds.size.width, y: 0, width: self.bounds.size.width, height: self.bounds.size.height-44)
+            controller?.view.frame = CGRect(x: CGFloat(index)*self.bounds.size.width, y: 0, width: self.bounds.size.width, height: self.bounds.size.height-topscrollHeight)
             self.rootScrollview?.addSubview((controller?.view)!)
             self.viewcontrollers?.append(controller ?? UIViewController())
             
             let btn = UIButton(type: .custom)
-            btn.frame = CGRect(x: CGFloat(index)*buttonWidth, y: 0, width: buttonWidth, height: 44)
+            btn.frame = CGRect(x: CGFloat(index)*buttonWidth, y: 0, width: buttonWidth, height: topscrollHeight)
             btn.setTitle(controller?.title, for: .normal)
             btn.setTitleColor(UIColor.black, for: .normal)
             btn.setTitleColor(UIColor.orange, for: .selected)
@@ -82,7 +82,7 @@ class MJLSlideSwitchView: UIView,UIScrollViewDelegate {
 
             }
         }
-        let backline = UIView(frame: CGRect(x: 0, y: 43, width: (self.topScrollview?.contentSize.width)!, height: 1))
+        let backline = UIView(frame: CGRect(x: 0, y: topscrollHeight-1, width: (self.topScrollview?.contentSize.width)!, height: 1))
         backline.backgroundColor = UIColor.groupTableViewBackground
         self.topScrollview?.addSubview(backline)
         self.topScrollview?.bringSubview(toFront: self.shadowimage!)
