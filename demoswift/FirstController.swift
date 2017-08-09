@@ -37,7 +37,6 @@ class FirstController: UIViewController {
         super.viewDidLoad()
         self.title = "首页"
         self.view.backgroundColor = UIColor.white
-        
         let pusButton: UIButton = UIButton(type: .custom)
         pusButton.frame = CGRect(x: 100, y: 220, width: 100, height: 40)
         pusButton.backgroundColor = UIColor.red
@@ -53,6 +52,9 @@ class FirstController: UIViewController {
         self.contentLab?.isUserInteractionEnabled = true
         self.contentLab?.textAlignment = .center
         self.view.addSubview(self.contentLab!)
+        let maxY = pusButton.frame.maxY
+        print(maxY)
+        
 
     }
     func haha() -> Void {

@@ -14,6 +14,8 @@ class TabbarController: UITabBarController {
         super.viewDidLoad()
         let tab1 = FirstController.init()
         tab1.age = 26
+        tab1.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "")?.withRenderingMode(.alwaysOriginal))
+        
         let nav1 = UINavigationController.init(rootViewController: tab1)
         let tab2 = SecondController.init()
         
