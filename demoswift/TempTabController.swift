@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class TempTabController: UITableViewController {
 
     override func viewDidLoad() {
@@ -44,6 +44,7 @@ class TempTabController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        SVProgressHUD.showSuccess(withStatus: self.title!+"第"+"\(indexPath.row+1)"+"行")
     }
     
 }

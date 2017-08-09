@@ -3,5 +3,6 @@ use_frameworks!
 target 'demoswift' do
 
 pod 'Alamofire'
+pod 'SVProgressHUD'
 end
 
